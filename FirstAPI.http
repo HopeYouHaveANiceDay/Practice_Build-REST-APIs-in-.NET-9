@@ -1,0 +1,61 @@
+
+@rootURL = https://localhost:xxxx
+
+GET {{rootURL}}/weatherforecast
+Accept: application/json
+
+###
+GET {{rootURL}}/api/books
+Accept: application/json
+
+###
+GET {{rootURL}}/api/books/2
+Accept: application/json
+
+//有一個小錯誤會導致 POST 請求失敗。
+//問題：POST 區塊前面沒有 ### 分隔線
+// 在 .http 檔中，每個請求區塊應該用 ### 分隔，否則 REST Client 可能會解析錯誤或混淆請求。
+//每個請求之間用 ### 分隔.
+
+//另一個錯誤: Content-Type之後要隔一行空白行
+
+### 
+POST {{rootURL}}/api/books
+Content-Type: application/json 
+
+{
+    "title": "Book 12",
+    "author": "Author 12",
+    "yearPublished": 20016
+}
+
+// because we run the application again, the changes that we made,
+// this new book that we added to our list isn't save anymore.
+// So each time we run the app again or we close Visual Studio and open it up again.
+// The changes aren't saved. 
+//For this reason, need to lean how to store our API data in a database. 
+
+
+// Content-Type之後要隔一行空白行
+
+// Error: in my case, show '405 Method Not Allowed', allow:Get, 
+// 改咗 BoooksController.cs 錯嘅嘢之後，係 close terminal 再 open terminal 重新執行：
+//      (1): cd /Users/xxxxx/xxxxxxx/xxxxxxxx
+//      (2): dotnet run --launch-profile https
+
+###
+PUT {{rootURL}}/api/books/1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "title": "Hope You Have a Nice Day",
+    "author": "Katie FAN",
+    "yearPublished": 2025
+}
+
+// 405 Method Not Allowed, Connection: close, Allow: GET, PUT
+// connect again => close terminal 再 open terminal 重新執行 => finished.
+
+###
+DELETE {{rootURL}}/api/books/4
