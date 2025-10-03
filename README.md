@@ -9,7 +9,7 @@ Step 2: Build a REST API in .NET 9: https://youtu.be/38GNKtclDdE?si=W3_1ozdNTZeX
 
 ✅ Project Summary: REST API with SQL Server Integration on macOS
 
-I completed a project to build a REST API with full CRUD operations using .NET 9, based on YouTube tutorials. I used VS Code, whereas the YouTube video used Visual Studio. Also, while the original tutorial followed a Windows-based setup, I adapted the workflow for my MacBook environment by using Docker to run SQL Server and Azure Data Studio for database management. Some project files have been uploaded, and a screenshot was captured showing the output of Azure Data Studio running on macOS. Thanks.
+build a REST API with full CRUD operations using .NET 9, based on YouTube tutorials. I used VS Code, whereas the YouTube video used Visual Studio. Also, while the original tutorial followed a Windows-based setup, I adapted the workflow for my MacBook environment by using Docker to run SQL Server and Azure Data Studio for database management. Some project files have been uploaded, and a screenshot was captured showing the output of Azure Data Studio running on macOS. Thanks.
 
 
 
